@@ -20,9 +20,12 @@
 import { getFromSnykOrgs } from "./snyk-requester";
 import { Logger as SplunkLogger } from 'splunk-logging';
 
+const SPLUNK_HEC_URL = ""
+const SPLUNK_HEC_TOKEN = ""
+
 const loggerConfig = {
-    url: "SPLUNK_HEC_URL",
-    token: "SPLUNK_HEC_TOKEN",
+    url: SPLUNK_HEC_URL,
+    token: SPLUNK_HEC_TOKEN,
     maxBatchCount: 10,
 };
 
