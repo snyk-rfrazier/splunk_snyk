@@ -4,7 +4,8 @@ export async function getFromSnykOrgs(){
     const SNYK_AUTHORIZATION_TOKEN = ""
     const SNYK_ORG = ""
     const LIMIT = 10
-    const snykURI = `https://api.snyk.io/rest/orgs/${SNYK_ORG}/issues?version=2023-11-27%7Ebeta&limit=${LIMIT}`
+    const API_VERSION = "2024-01-23"
+    const snykURI = `https://api.snyk.io/rest/orgs/${SNYK_ORG}/issues?version=${API_VERSION}&limit=${LIMIT}`
     try {
         const resp: AxiosResponse = await axios.get(snykURI, {
             headers: {
